@@ -29,6 +29,25 @@ namespace Ron.Base.Extension
             r.z += z;
             return r;
         }
+
+        public static Vector3Int WithY(this Vector3Int val, int yVal = 0)
+        {
+            var r = val.Copy();
+            r.y = yVal;
+            return r;
+        }
+        public static Vector3Int WithX(this Vector3Int val, int xVal = 0)
+        {
+            var r = val.Copy();
+            r.x = xVal;
+            return r;
+        }
+        public static Vector3Int WithZ(this Vector3Int val, int xVal = 0)
+        {
+            var r = val.Copy();
+            r.z = xVal;
+            return r;
+        }
     }
     public static class Vector3Extension
     {
