@@ -104,5 +104,13 @@ namespace Ron.Base.Extension
         {
             return (to - from);
         }
+
+        public static Vector3Int ToV3Int(this Vector3 self)
+        {
+            int x = Mathf.RoundToInt(self.x);
+            int y = Mathf.RoundToInt(self.y);
+            int z = Mathf.RoundToInt(self.z);
+            return new Vector3Int(x, y, z);
+        }
     }
 }
