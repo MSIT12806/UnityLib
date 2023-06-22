@@ -112,5 +112,15 @@ namespace Ron.Base.Extension
             int z = Mathf.RoundToInt(self.z);
             return new Vector3Int(x, y, z);
         }
+
+        public static System.Numerics.Vector3 ToSystemVector3(this Vector3 unityVector)
+        {
+            return new System.Numerics.Vector3(unityVector.x, unityVector.y, unityVector.z);
+        }
+
+        public static Vector3 ToUnityVector3(this System.Numerics.Vector3 systemVector)
+        {
+            return new Vector3(systemVector.X, systemVector.Y, systemVector.Z);
+        }
     }
 }
