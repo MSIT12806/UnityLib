@@ -29,7 +29,6 @@ namespace Ron.Base.Extension
             r.z += z;
             return r;
         }
-
         public static Vector3Int WithY(this Vector3Int val, int yVal = 0)
         {
             var r = val.Copy();
@@ -75,13 +74,11 @@ namespace Ron.Base.Extension
             r.x = xVal;
             return r;
         }
-
         public static Vector3 AddY(this Vector3 val, float addVal)
         {
             val.y += addVal;
             return val;
         }
-
         public static Vector3 GetLocalRight(this Vector3 forward)
         {
             return Vector3.Cross(forward.normalized, Vector3.up);
@@ -90,12 +87,10 @@ namespace Ron.Base.Extension
         {
             return Vector3.Cross(forward.normalized, Vector3.right);
         }
-
         public static Vector3 GetRandomDirection()
         {
             return new Vector3(UnityEngine.Random.value - 0.5f, UnityEngine.Random.value - 0.5f, UnityEngine.Random.value - 0.5f);
         }
-
         public static Vector3 GetDirection(Vector3 from, Vector3 to)
         {
             return (to - from).normalized;
@@ -104,7 +99,6 @@ namespace Ron.Base.Extension
         {
             return (to - from);
         }
-
         public static Vector3Int ToV3Int(this Vector3 self)
         {
             int x = Mathf.RoundToInt(self.x);
@@ -112,12 +106,10 @@ namespace Ron.Base.Extension
             int z = Mathf.RoundToInt(self.z);
             return new Vector3Int(x, y, z);
         }
-
         public static System.Numerics.Vector3 ToSystemVector3(this Vector3 unityVector)
         {
             return new System.Numerics.Vector3(unityVector.x, unityVector.y, unityVector.z);
         }
-
         public static Vector3 ToUnityVector3(this System.Numerics.Vector3 systemVector)
         {
             return new Vector3(systemVector.X, systemVector.Y, systemVector.Z);
